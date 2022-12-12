@@ -1,0 +1,50 @@
+{
+  "name": "@cuboapp/functions",
+  "version": "0.0.1",
+  "author": "Yaroslav Shelomentsev",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "description": "JavaScript functions, helps in coding",
+  "main": "./dist/main.js",
+  "types": "./dist/main.d.ts",
+  "scripts": {
+    "lint": "npx eslint ./src",
+    "format": "npx eslint ./src --fix",
+    "dev": "npx nodemon",
+    "start": "yarn build && node build/main",
+    "build": "rimraf ./dist && npx tsc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuboapp/functions.git"
+  },
+  "keywords": [
+    "cubo",
+    "js",
+    "functions"
+  ],
+  "bugs": {
+    "url": "https://github.com/cuboapp/scheduler/issues"
+  },
+  "homepage": "https://github.com/cuboapp/scheduler#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.13",
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
+    "eslint": "^8.29.0",
+    "husky": "^8.0.2",
+    "nodemon": "^2.0.20",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "date-fns": "^2.29.3"
+  }
+}
