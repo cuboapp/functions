@@ -1,6 +1,7 @@
 .vscode
 .gitignore
 .prettierrc.cjs
+yarn-error.log
 node_modules
 npm-debug.log
 test
