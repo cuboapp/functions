@@ -4,6 +4,9 @@
   "author": "Yaroslav Shelomentsev",
   "type": "module",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "description": "JavaScript functions, helps in coding",
   "main": "./dist/main.js",
