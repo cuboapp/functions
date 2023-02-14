@@ -1,1 +1,1 @@
-export { ucfirst } from './misc/index.js'
+export * from './misc/index.js'
