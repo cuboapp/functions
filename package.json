@@ -9,14 +9,25 @@
   },
   "license": "MIT",
   "description": "JavaScript functions, helps in coding",
-  "main": "./dist/main.js",
-  "types": "./dist/main.d.ts",
+  "main": "./dist/cjs/main.js",
+  "module": "./dist/esm/main.js",
+  "types": "./dist/esm/main.d.ts",
+  "exports": {
+    ".": {
+      "node": "./dist/cjs/main.js",
+      "import": "./dist/esm/main.js",
+      "require": "./dist/cjs/main.js",
+      "default": "./dist/esm/main.js"
+    }
+  },
   "scripts": {
     "lint": "npx eslint ./src",
     "format": "npx eslint ./src --fix",
     "dev": "npx nodemon",
     "start": "yarn build && node build/main",
-    "build": "rimraf ./dist && npx tsc"
+    "build": "rimraf ./dist && yarn build:esm && yarn build:cjs",
+    "build:esm": "npx tsc --module es2015 --outDir dist/esm",
+    "build:cjs": "npx tsc --module commonjs --outDir dist/cjs"
   },
   "devDependencies": {
     "@types/node": "^18.11.13",

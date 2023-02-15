@@ -4,7 +4,6 @@
     "lib": ["ES6"],
     "module": "NodeNext",
     "rootDir": "./src",
-    "resolveJsonModule": true,
     "declaration": true,
     "allowJs": true,
     "sourceMap": false,
